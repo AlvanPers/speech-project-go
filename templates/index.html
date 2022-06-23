@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form style="text-align: center;">
+        <input type="button" value="Randon speech generation" onClick="location.href='/indexrandom.html/'">
+        <input type="button" value="Add phrase in data" onClick="location.href='/indexAddInBase.html/'">
+    </form>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Headtext</th>
+            <th>Bodytext</th>
+            <th>Finaltext</th>
+        </thead>
+        {{range . }}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Headtext}}</td>
+            <td>{{.Bodytext}}</td>
+            <td>{{.Finaltext}}</td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+
+</html>
